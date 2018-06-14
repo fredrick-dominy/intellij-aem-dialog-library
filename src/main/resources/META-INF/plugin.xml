@@ -1,0 +1,16 @@
+<idea-plugin>
+    <id>org.jetbrains.aem-dialog-library</id>
+    <name>AEM Dialog Library</name>
+    <vendor email="fredrickdominy@gmail.com" url="">Fredrick Dominy</vendor>
+
+    <description><![CDATA[
+    <h3>AEM Live Template Dialogs</h3>
+    ]]></description>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <defaultLiveTemplatesProvider implementation="AEMDialogTemplateProvider"/>
+    </extensions>
+
+    <actions></actions>
+</idea-plugin>

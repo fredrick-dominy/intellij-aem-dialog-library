@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templateSet group="AEM-Dialogs">
+    <template name="radiogroup"
+        value="&lt;$nodeHeading$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/foundation/heading&quot;&#10;    text=&quot;$text$&quot;&#10;    level=&quot;$level$&quot;/&gt;&#10;&lt;$node$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/radiogroup&quot;&#10;    deleteHint=&quot;{Boolean}false&quot;&#10;    vertical=&quot;{Boolean}true&quot;&#10;    name=&quot;./$name$&quot;&gt;&#10;    &lt;items&#10;        jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;        &lt;$option$&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            text=&quot;$text$&quot;&#10;            value=&quot;$value$&quot;&#10;            checked=&quot;{Boolean}$checked$&quot;/&gt;&#10;        $END$&#10;    &lt;/items&gt;&#10;&lt;/$node$&gt;"
+        description="6.3 Radio Group"
+        toReformat="false"
+        toShortenFQNames="true">
+        <variable name="nodeHeading" expression="" defaultValue="&quot;radio-group-heading&quot;" alwaysStopAt="true"/>
+        <variable name="text" expression="" defaultValue="&quot;Radio Heading Instructions&quot;" alwaysStopAt="true"/>
+        <variable name="level" expression="" defaultValue="&quot;3&quot;" alwaysStopAt="true"/>
+        <variable name="node" expression="" defaultValue="&quot;radio-group&quot;" alwaysStopAt="true"/>
+        <variable name="name" expression="" defaultValue="&quot;radioGroup&quot;" alwaysStopAt="true"/>
+        <variable name="option" expression="" defaultValue="&quot;Option&quot;" alwaysStopAt="true"/>
+        <variable name="value" expression="" defaultValue="&quot;option&quot;" alwaysStopAt="true"/>
+        <variable name="checked" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="XML_TEXT" value="true"/>
+        </context>
+    </template>
+    <template name="heading"
+        value="&lt;$nodeName$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/foundation/heading&quot;&#10;    class=&quot;coral-Heading coral-Heading--$value$&quot;&#10;    level=&quot;{Long}$value$&quot;&#10;    text=&quot;$content$&quot;/&gt;&#10;$END$"
+        description="6.3 Heading"
+        toReformat="false"
+        toShortenFQNames="true">
+        <variable name="nodeName" expression="" defaultValue="&quot;heading&quot;" alwaysStopAt="true"/>
+        <variable name="value" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true"/>
+        <variable name="content" expression="" defaultValue="&quot;H1 Heading Content&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="XML_TEXT" value="true"/>
+        </context>
+    </template>
+    <template name="pathbrowser"
+        value="&lt;$node$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/pathbrowser&quot;&#10;    fieldDescription=&quot;$fieldDescription$&quot;&#10;    fieldLabel=&quot;$fieldLabel$&quot;&#10;    name=&quot;./$name$&quot;&#10;    required=&quot;{Boolean}$required$&quot;&#10;    rootPath=&quot;/$rootPath$&quot;/&gt;&#10;$END$&#10;"
+        description="Path Browser"
+        toReformat="false"
+        toShortenFQNames="true">
+        <variable name="node" expression="" defaultValue="&quot;path-browser-node&quot;" alwaysStopAt="true"/>
+        <variable name="fieldDescription"
+            expression=""
+            defaultValue="&quot;Browse to path or asset.&quot;"
+            alwaysStopAt="true"/>
+        <variable name="fieldLabel" expression="" defaultValue="&quot;Browse Path&quot;" alwaysStopAt="true"/>
+        <variable name="name" expression="" defaultValue="&quot;pathBrowser&quot;" alwaysStopAt="true"/>
+        <variable name="required" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true"/>
+        <variable name="rootPath" expression="" defaultValue="&quot;content&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="XML_TEXT" value="true"/>
+        </context>
+    </template>
+    <template name="fieldset"
+        value="&lt;$node$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    jcr:title=&quot;$title$&quot;&#10;    cq:showOnCreate=&quot;{Boolean}false&quot;&#10;    sling:resourceType=&quot;granite/ui/components/foundation/form/fieldset&quot;&gt;&#10;    &lt;layout&#10;        jcr:primaryType=&quot;nt:unstructured&quot;&#10;        sling:resourceType=&quot;granite/ui/components/foundation/layouts/fixedcolumns&quot;/&gt;&#10;    &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;        &lt;columns&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            sling:resourceType=&quot;granite/ui/components/foundation/container&quot;&gt;&#10;            &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;                &lt;!-- add dialogs here --&gt;&#10;            &lt;/items&gt;&#10;        &lt;/columns&gt;&#10;    &lt;/items&gt;&#10;&lt;/$node$&gt;&#10;$END$"
+        description="6.3 Fieldset"
+        toReformat="true"
+        toShortenFQNames="true">
+        <variable name="node" expression="" defaultValue="&quot;fieldset&quot;" alwaysStopAt="true"/>
+        <variable name="title" expression="" defaultValue="&quot;Fieldset Title&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="XML_TEXT" value="true"/>
+        </context>
+    </template>
+    <template name="well"
+        value="&lt;well&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/foundation/container&quot;&gt;&#10;    &lt;layout&#10;        jcr:primaryType=&quot;nt:unstructured&quot;&#10;        sling:resourceType=&quot;granite/ui/components/foundation/layouts/well&quot;/&gt;&#10;    &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;        $END$&#10;    &lt;/items&gt;&#10;&lt;/well&gt;"
+        description="6.3 Well Layout"
+        toReformat="false"
+        toShortenFQNames="true">
+        <context>
+            <option name="XML_TEXT" value="true"/>
+        </context>
+    </template>
+    <template name="richtext"
+        value="&lt;$node$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;cq/gui/components/authoring/dialog/richtext&quot;&#10;    name=&quot;./$name$&quot;&#10;    externalStyleSheets=&quot;/etc/designs/$clientlib$/clientlib-author.css&quot;&#10;    useFixedInlineToolbar=&quot;{Boolean}true&quot;&gt;&#10;    &lt;rtePlugins jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;        &lt;format&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            features=&quot;[bold,italic]&quot;/&gt;&#10;        &lt;subsuperscript&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            features=&quot;*&quot;/&gt;&#10;        &lt;paraformat&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            features=&quot;*&quot;&gt;&#10;            &lt;formats jcr:primaryType=&quot;cq:WidgetCollection&quot;&gt;&#10;                &lt;p&#10;                    jcr:primaryType=&quot;nt:unstructured&quot;&#10;                    description=&quot;Paragraph&quot;&#10;                    tag=&quot;p&quot;/&gt;&#10;                &lt;h1&#10;                    jcr:primaryType=&quot;nt:unstructured&quot;&#10;                    description=&quot;Header 1&quot;&#10;                    tag=&quot;h1&quot;/&gt;&#10;                &lt;h2&#10;                    jcr:primaryType=&quot;nt:unstructured&quot;&#10;                    description=&quot;Header 2&quot;&#10;                    tag=&quot;h2&quot;/&gt;&#10;                &lt;h3&#10;                    jcr:primaryType=&quot;nt:unstructured&quot;&#10;                    description=&quot;Header 3&quot;&#10;                    tag=&quot;h3&quot;/&gt;&#10;                &lt;h4&#10;                    jcr:primaryType=&quot;nt:unstructured&quot;&#10;                    description=&quot;Header 4&quot;&#10;                    tag=&quot;h4&quot;/&gt;&#10;                &lt;h5&#10;                    jcr:primaryType=&quot;nt:unstructured&quot;&#10;                    description=&quot;Header 5&quot;&#10;                    tag=&quot;h5&quot;/&gt;&#10;                &lt;h6&#10;                    jcr:primaryType=&quot;nt:unstructured&quot;&#10;                    description=&quot;Header 6&quot;&#10;                    tag=&quot;h6&quot;/&gt;&#10;            &lt;/formats&gt;&#10;        &lt;/paraformat&gt;&#10;        &lt;misctools&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            features=&quot;specialchars&quot;&gt;&#10;            &lt;specialCharsConfig jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;                &lt;chars jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;                    &lt;copyright&#10;                        jcr:primaryType=&quot;nt:unstructured&quot;&#10;                        entity=&quot;Â©&quot;/&gt;&#10;                    &lt;trademark&#10;                        jcr:primaryType=&quot;nt:unstructured&quot;&#10;                        entity=&quot;â„¢&quot;/&gt;&#10;                    &lt;registered&#10;                        jcr:primaryType=&quot;nt:unstructured&quot;&#10;                        entity=&quot;Â®&quot;/&gt;&#10;                    &lt;emDash&#10;                        jcr:primaryType=&quot;nt:unstructured&quot;&#10;                        entity=&quot;â€”&quot;/&gt;&#10;                    &lt;pound&#10;                        jcr:primaryType=&quot;nt:unstructured&quot;&#10;                        entity=&quot;Â£&quot;/&gt;&#10;                    &lt;nbsp&#10;                        jcr:primaryType=&quot;nt:unstructured&quot;&#10;                        entity=&quot; &quot;/&gt;&#10;                &lt;/chars&gt;&#10;            &lt;/specialCharsConfig&gt;&#10;        &lt;/misctools&gt;&#10;        &lt;links jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;            &lt;linkDialogConfig&#10;                jcr:primaryType=&quot;nt:unstructured&quot;&#10;                height=&quot;{Long}316&quot;&gt;&#10;                &lt;linkAttributes jcr:primaryType=&quot;cq:WidgetCollection&quot;/&gt;&#10;            &lt;/linkDialogConfig&gt;&#10;        &lt;/links&gt;&#10;        &lt;edit&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            defaultPasteMode=&quot;plaintext&quot;&#10;            features=&quot;[cut,copy,paste-plaintext]&quot;&#10;            stripHtmlTags=&quot;{Boolean}true&quot;/&gt;&#10;        &lt;spellcheck&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            features=&quot;*&quot;/&gt;&#10;        &lt;findreplace&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            features=&quot;*&quot;/&gt;&#10;        &lt;undo&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            features=&quot;*&quot;/&gt;&#10;        &lt;lists&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            features=&quot;*&quot;/&gt;&#10;        &lt;justify&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            features=&quot;*&quot;/&gt;&#10;        &lt;styles&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            features=&quot;*&quot;&gt;&#10;            &lt;styles jcr:primaryType=&quot;cq:WidgetCollection&quot;&gt;&#10;                &lt;plainSpan&#10;                    jcr:primaryType=&quot;nt:unstructured&quot;&#10;                    cssName=&quot;defaultSpan&quot;&#10;                    text=&quot;Default (add span tag)&quot;/&gt;&#10;                &lt;note&#10;                    jcr:primaryType=&quot;nt:unstructured&quot;&#10;                    cssName=&quot;note&quot;&#10;                    text=&quot;Footnote&quot;/&gt;&#10;                &lt;intro&#10;                    jcr:primaryType=&quot;nt:unstructured&quot;&#10;                    cssName=&quot;intro&quot;&#10;                    text=&quot;Intro text&quot;/&gt;&#10;            &lt;/styles&gt;&#10;        &lt;/styles&gt;&#10;    &lt;/rtePlugins&gt;&#10;    &lt;uiSettings jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;        &lt;cui jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;            &lt;inline&#10;                jcr:primaryType=&quot;nt:unstructured&quot;&#10;                toolbar=&quot;[format#bold,format#italic,#paraformat,#justify,#lists,links#modifylink,links#anchor,links#unlink,#styles,subsuperscript#subscript,subsuperscript#superscript,findreplace#find,findreplace#replace,undo#undo,undo#redo,spellcheck#checktext,misctools#specialchars,#format]&quot;&gt;&#10;                &lt;popovers jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;                    &lt;justify&#10;                        jcr:primaryType=&quot;nt:unstructured&quot;&#10;                        items=&quot;[justify#justifyleft,justify#justifycenter,justify#justifyright]&quot;&#10;                        ref=&quot;justify&quot;/&gt;&#10;                    &lt;lists&#10;                        jcr:primaryType=&quot;nt:unstructured&quot;&#10;                        items=&quot;[lists#unordered,lists#ordered,lists#outdent,lists#indent]&quot;&#10;                        ref=&quot;lists&quot;/&gt;&#10;                    &lt;paraformat&#10;                        jcr:primaryType=&quot;nt:unstructured&quot;&#10;                        items=&quot;paraformat:getFormats:paraformat-pulldown&quot;&#10;                        ref=&quot;paraformat&quot;/&gt;&#10;                    &lt;styles&#10;                        jcr:primaryType=&quot;nt:unstructured&quot;&#10;                        items=&quot;styles:getStyles:styles-pulldown&quot;&#10;                        ref=&quot;styles&quot;/&gt;&#10;                &lt;/popovers&gt;&#10;            &lt;/inline&gt;&#10;        &lt;/cui&gt;&#10;    &lt;/uiSettings&gt;&#10;    &lt;htmlRules jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;        &lt;docType jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;            &lt;typeConfig jcr:primaryType=&quot;nt:unstructured&quot;&#10;                useSemanticMarkup=&quot;{Boolean}true&quot;&gt;&#10;                &lt;semanticMarkupMap&#10;                    b=&quot;strong&quot;&#10;                    i=&quot;em&quot;/&gt;&#10;            &lt;/typeConfig&gt;&#10;        &lt;/docType&gt;&#10;    &lt;/htmlRules&gt;&#10;&lt;/$node$&gt;&#10;$END$"
+        description="6.3 Richtext ADA-Compliant"
+        toReformat="false"
+        toShortenFQNames="true">
+        <variable name="node" expression="" defaultValue="&quot;text&quot;" alwaysStopAt="true"/>
+        <variable name="name" expression="" defaultValue="&quot;text&quot;" alwaysStopAt="true"/>
+        <variable name="clientlib" expression="" defaultValue="&quot;&lt;MYPROJECT&gt;&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="XML_TEXT" value="true"/>
+        </context>
+    </template>
+    <template name="checkbox"
+        value="&lt;$node$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/checkbox&quot;&#10;    deleteHint=&quot;{Boolean}false&quot;&#10;    fieldDescription=&quot;$description$&quot;&#10;    name=&quot;./$name$&quot;&#10;    text=&quot;$text$&quot;&#10;    uncheckedValue=&quot;{Boolean}$uncheckedValue$&quot;&#10;    value=&quot;{Boolean}$value$&quot;/&gt;&#10;$END$"
+        description="6.3 Checkbox"
+        toReformat="false"
+        toShortenFQNames="true">
+        <variable name="node" expression="" defaultValue="&quot;checkbox&quot;" alwaysStopAt="true"/>
+        <variable name="description"
+            expression=""
+            defaultValue="&quot;Describe how this checkbox should be used.&quot;"
+            alwaysStopAt="true"/>
+        <variable name="name" expression="" defaultValue="&quot;myCheckbox&quot;" alwaysStopAt="true"/>
+        <variable name="text"
+            expression=""
+            defaultValue="&quot;Describe what happens when checked&quot;"
+            alwaysStopAt="true"/>
+        <variable name="uncheckedValue" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true"/>
+        <variable name="value" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="XML_TEXT" value="true"/>
+        </context>
+    </template>
+    <template name="pathfield"
+        value="&lt;$node$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/pathfield&quot;&#10;    emptyText=&quot;$emptyText$&quot;&#10;    filter=&quot;$filter$&quot;&#10;    forceSelection=&quot;{Boolean}false&quot;&#10;    multiple=&quot;{Boolean}false&quot;&#10;    name=&quot;./$name$&quot;&#10;    required=&quot;{Boolean}$required$&quot;&#10;    rootPath=&quot;$rootPath$&quot;/&gt;&#10;$END$"
+        description="6.3 Pathfield"
+        toReformat="false"
+        toShortenFQNames="true">
+        <variable name="node" expression="" defaultValue="&quot;my-path&quot;" alwaysStopAt="true"/>
+        <variable name="emptyText" expression="" defaultValue="&quot;e.g. /path/to/content&quot;" alwaysStopAt="true"/>
+        <variable name="filter" expression="" defaultValue="&quot;hierarchyNotFile&quot;" alwaysStopAt="true"/>
+        <variable name="name" expression="" defaultValue="&quot;myPath&quot;" alwaysStopAt="true"/>
+        <variable name="required" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true"/>
+        <variable name="rootPath" expression="" defaultValue="&quot;/content&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="XML_TEXT" value="true"/>
+        </context>
+    </template>
+    <template name="select"
+        value="&lt;$node$&#10;&#9;jcr:primaryType=&quot;nt:unstructured&quot;&#10;&#9;sling:resourceType=&quot;granite/ui/components/foundation/form/select&quot;&#10;&#9;deleteHint=&quot;{Boolean}true&quot;&#10;&#9;emptyOption=&quot;{Boolean}$emptyOption$&quot;&#10;&#9;emptyText=&quot;$emptyText$&quot;&#10;&#9;multiple=&quot;{Boolean}$multiple$&quot;&#10;&#9;ordered=&quot;{Boolean}$ordered$&quot;&#10;&#9;fieldDescription=&quot;$description$&quot;&#10;&#9;fieldLabel=&quot;$fieldLabel$&quot;&#10;&#9;required=&quot;{Boolean}$required$&quot;&#10;&#9;translateOptions=&quot;{Boolean}false&quot;&#10;&#9;variant=&quot;default&quot;&#10;&#9;name=&quot;./$name$&quot;&gt;&#10;&#9;&lt;items&#10;&#9;&#9;jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;&#9;&#9;&lt;$option$&#10;&#9;&#9;&#9;jcr:primaryType=&quot;nt:unstructured&quot;&#10;&#9;&#9;&#9;text=&quot;$text$&quot;&#10;&#9;&#9;&#9;value=&quot;$value$&quot;&#10;&#9;&#9;&#9;selected=&quot;{Boolean}$selected$&quot; /&gt;&#10;        $END$&#10;&#9;&lt;/items&gt;&#10;&lt;/selectorName&gt;"
+        description="6.3 Select"
+        toReformat="false"
+        toShortenFQNames="true">
+        <variable name="node" expression="" defaultValue="&quot;selectorName&quot;" alwaysStopAt="true"/>
+        <variable name="emptyOption" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true"/>
+        <variable name="emptyText" expression="" defaultValue="&quot;Select a thing...&quot;" alwaysStopAt="true"/>
+        <variable name="multiple" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true"/>
+        <variable name="ordered" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true"/>
+        <variable name="description"
+            expression=""
+            defaultValue="&quot;Please make a selection.&quot;"
+            alwaysStopAt="true"/>
+        <variable name="fieldLabel" expression="" defaultValue="&quot;Thing Selector&quot;" alwaysStopAt="true"/>
+        <variable name="required" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true"/>
+        <variable name="name" expression="" defaultValue="&quot;selectorName&quot;" alwaysStopAt="true"/>
+        <variable name="option" expression="" defaultValue="&quot;option1&quot;" alwaysStopAt="true"/>
+        <variable name="text" expression="" defaultValue="&quot;Option 1&quot;" alwaysStopAt="true"/>
+        <variable name="value" expression="" defaultValue="&quot;option1&quot;" alwaysStopAt="true"/>
+        <variable name="selected" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="XML_TEXT" value="true"/>
+        </context>
+    </template>
+    <template name="option"
+        value="&lt;$option$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    text=&quot;$text$&quot;&#10;    value=&quot;$value$&quot;&#10;    selected=&quot;{Boolean}$selected$&quot;/&gt;&#10;$END$"
+        description="6.3 Option - use with select or radio"
+        toReformat="false"
+        toShortenFQNames="true">
+        <variable name="option" expression="" defaultValue="&quot;option&quot;" alwaysStopAt="true"/>
+        <variable name="text" expression="" defaultValue="&quot;Option&quot;" alwaysStopAt="true"/>
+        <variable name="value" expression="" defaultValue="&quot;optionValue&quot;" alwaysStopAt="true"/>
+        <variable name="selected" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="XML_TEXT" value="true"/>
+        </context>
+    </template>
+    <template name="datepicker"
+        value="&lt;$node$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/datepicker&quot;&#10;    displayTimezoneMessage=&quot;{Boolean}true&quot;&#10;    emptyText=&quot;$emptyText$&quot;&#10;    fieldDescription=&quot;$description$&quot;&#10;    fieldLabel=&quot;$fieldLabel$&quot;&#10;    name=&quot;./$name$&quot;&#10;    required=&quot;{Boolean}$required$&quot;&#10;    type=&quot;date&quot;&#10;    displayedFormat=&quot;$format$&quot;&#10;    value=&quot;&quot;/&gt;&#10;$END$"
+        description="6.3 Datepicker"
+        toReformat="false"
+        toShortenFQNames="true">
+        <variable name="node" expression="" defaultValue="&quot;datepicker&quot;" alwaysStopAt="true"/>
+        <variable name="emptyText" expression="" defaultValue="&quot;Enter Date Here...&quot;" alwaysStopAt="true"/>
+        <variable name="description" expression="" defaultValue="&quot;Enter Description&quot;" alwaysStopAt="true"/>
+        <variable name="fieldLabel" expression="" defaultValue="&quot;Datepicker Label&quot;" alwaysStopAt="true"/>
+        <variable name="name" expression="" defaultValue="&quot;date&quot;" alwaysStopAt="true"/>
+        <variable name="required" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true"/>
+        <variable name="format" expression="" defaultValue="&quot;YYYY-MM-DD&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="XML_TEXT" value="true"/>
+        </context>
+    </template>
+    <template name="textarea"
+        value="&lt;$node$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/textarea&quot;&#10;    emptyText=&quot;$emptyText$&quot;&#10;    fieldDescription=&quot;$description$&quot;&#10;    fieldLabel=&quot;$label$&quot;&#10;    maxlength=&quot;$maxlength$&quot;&#10;    name=&quot;./$name$&quot;&#10;    required=&quot;{Boolean}$required$&quot;/&gt;&#10;$END$"
+        description="6.3 Textarea"
+        toReformat="false"
+        toShortenFQNames="true">
+        <variable name="node" expression="" defaultValue="&quot;text-area&quot;" alwaysStopAt="true"/>
+        <variable name="emptyText"
+            expression=""
+            defaultValue="&quot;e.g. Add descriptive content&quot;"
+            alwaysStopAt="true"/>
+        <variable name="description"
+            expression=""
+            defaultValue="&quot;Special Instructions:&quot;"
+            alwaysStopAt="true"/>
+        <variable name="label" expression="" defaultValue="&quot;Descriptive Label&quot;" alwaysStopAt="true"/>
+        <variable name="maxlength" expression="" defaultValue="&quot;300&quot;" alwaysStopAt="true"/>
+        <variable name="name" expression="" defaultValue="&quot;myTextarea&quot;" alwaysStopAt="true"/>
+        <variable name="required" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="XML_TEXT" value="true"/>
+        </context>
+    </template>
+    <template name="textfield"
+        value="&lt;$node$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/textfield&quot;&#10;    emptyText=&quot;$emptyText$&quot;&#10;    fieldDescription=&quot;$fieldDescription$&quot;&#10;    fieldLabel=&quot;$fieldLabel$&quot;&#10;    maxlength=&quot;$maxlength$&quot;&#10;    name=&quot;./$name$&quot;&#10;    required=&quot;{Boolean}$required$&quot;/&gt;&#10;$END$"
+        description="6.3 Textfield"
+        toReformat="false"
+        toShortenFQNames="true">
+        <variable name="node" expression="" defaultValue="&quot;my-text-field&quot;" alwaysStopAt="true"/>
+        <variable name="emptyText" expression="" defaultValue="&quot;e.g. Textfield Content&quot;" alwaysStopAt="true"/>
+        <variable name="fieldDescription"
+            expression=""
+            defaultValue="&quot;Add a description here.&quot;"
+            alwaysStopAt="true"/>
+        <variable name="fieldLabel" expression="" defaultValue="&quot;Text Field&quot;" alwaysStopAt="true"/>
+        <variable name="maxlength" expression="" defaultValue="&quot;100&quot;" alwaysStopAt="true"/>
+        <variable name="name" expression="" defaultValue="&quot;myTextField&quot;" alwaysStopAt="true"/>
+        <variable name="required" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="XML_TEXT" value="true"/>
+        </context>
+    </template>
+    <template name="multifield"
+        value="&lt;$node$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;granite/ui/components/coral/foundation/form/multifield&quot;&#10;    composite=&quot;{Boolean}true&quot;&#10;    deleteHint=&quot;{Boolean}true&quot;&#10;    fieldDescription=&quot;$description$&quot;&#10;    fieldLabel=&quot;$label$&quot;&#10;    required=&quot;{Boolean}$required$&quot;&#10;    typeHint=&quot;String[]&quot;&gt;&#10;    &lt;field&#10;        jcr:primaryType=&quot;nt:unstructured&quot;&#10;        sling:resourceType=&quot;granite/ui/components/coral/foundation/container&quot;&#10;        name=&quot;./$name$&quot;&gt;&#10;        &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;            $END$&#10;        &lt;/items&gt;&#10;    &lt;/field&gt;&#10;&lt;/$node$&gt;"
+        description="6.3 Multifield"
+        toReformat="false"
+        toShortenFQNames="true">
+        <variable name="node" expression="" defaultValue="&quot;multifield&quot;" alwaysStopAt="true"/>
+        <variable name="description"
+            expression=""
+            defaultValue="&quot;Multifield Description is here.&quot;"
+            alwaysStopAt="true"/>
+        <variable name="label" expression="" defaultValue="&quot;Multifield Label&quot;" alwaysStopAt="true"/>
+        <variable name="required" expression="" defaultValue="&quot;false&quot;" alwaysStopAt="true"/>
+        <variable name="name" expression="" defaultValue="&quot;multifieldItems&quot;" alwaysStopAt="true"/>
+        <context>
+            <option name="XML_TEXT" value="true"/>
+        </context>
+    </template>
+</templateSet>

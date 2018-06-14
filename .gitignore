@@ -1,0 +1,9 @@
+.idea
+.DS_Store
+styles
+/test
+/test/*
+.gradle
+gradle.properties
+build
+
