@@ -6,4 +6,4 @@ styles
 .gradle
 gradle.properties
 build
-
+test.xml

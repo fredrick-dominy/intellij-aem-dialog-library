@@ -22,6 +22,7 @@ heading | granite/ui/components/foundation/heading
 fieldset | granite/ui/components/foundation/form/fieldset
 datepicker | granite/ui/components/coral/foundation/form/datepicker
 checkbox | granite/ui/components/coral/foundation/form/checkbox
+graphiciconselect | make sure you have [ACS Graphic Icon](https://adobe-consulting-services.github.io/acs-aem-commons/features/ui-widgets/icon-picker/index.html) loaded
 
 
 More to come...

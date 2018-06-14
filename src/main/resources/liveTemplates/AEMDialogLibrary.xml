@@ -49,7 +49,7 @@
         </context>
     </template>
     <template name="fieldset"
-        value="&lt;$node$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    jcr:title=&quot;$title$&quot;&#10;    cq:showOnCreate=&quot;{Boolean}false&quot;&#10;    sling:resourceType=&quot;granite/ui/components/foundation/form/fieldset&quot;&gt;&#10;    &lt;layout&#10;        jcr:primaryType=&quot;nt:unstructured&quot;&#10;        sling:resourceType=&quot;granite/ui/components/foundation/layouts/fixedcolumns&quot;/&gt;&#10;    &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;        &lt;columns&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            sling:resourceType=&quot;granite/ui/components/foundation/container&quot;&gt;&#10;            &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;                &lt;!-- add dialogs here --&gt;&#10;            &lt;/items&gt;&#10;        &lt;/columns&gt;&#10;    &lt;/items&gt;&#10;&lt;/$node$&gt;&#10;$END$"
+        value="&lt;$node$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    jcr:title=&quot;$title$&quot;&#10;    cq:showOnCreate=&quot;{Boolean}false&quot;&#10;    sling:resourceType=&quot;granite/ui/components/foundation/form/fieldset&quot;&gt;&#10;    &lt;layout&#10;        jcr:primaryType=&quot;nt:unstructured&quot;&#10;        sling:resourceType=&quot;granite/ui/components/foundation/layouts/fixedcolumns&quot;/&gt;&#10;    &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;        &lt;columns&#10;            jcr:primaryType=&quot;nt:unstructured&quot;&#10;            sling:resourceType=&quot;granite/ui/components/foundation/container&quot;&gt;&#10;            &lt;items jcr:primaryType=&quot;nt:unstructured&quot;&gt;&#10;                $END$&#10;            &lt;/items&gt;&#10;        &lt;/columns&gt;&#10;    &lt;/items&gt;&#10;&lt;/$node$&gt;"
         description="6.3 Fieldset"
         toReformat="true"
         toShortenFQNames="true">
@@ -142,7 +142,7 @@
         </context>
     </template>
     <template name="option"
-        value="&lt;$option$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    text=&quot;$text$&quot;&#10;    value=&quot;$value$&quot;&#10;    selected=&quot;{Boolean}$selected$&quot;/&gt;&#10;$END$"
+        value="&lt;$option$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    text=&quot;$text$&quot;&#10;    value=&quot;$value$&quot;&#10;    selected=&quot;{Boolean}$selected$&quot;/&gt;&#10;    $END$"
         description="6.3 Option - use with select or radio"
         toReformat="false"
         toShortenFQNames="true">
@@ -227,5 +227,20 @@
         <context>
             <option name="XML_TEXT" value="true"/>
         </context>
+    </template>
+    <template name="graphiciconselect"
+        value="&lt;$node$&#10;    jcr:primaryType=&quot;nt:unstructured&quot;&#10;    sling:resourceType=&quot;/apps/$project$/components/$overrideLocation$&quot;&#10;    fieldLabel=&quot;$fieldLabel$&quot;&#10;    name=&quot;./$name$&quot;&gt;&#10;    &lt;datasource&#10;        jcr:primaryType=&quot;nt:unstructured&quot;&#10;        sling:resourceType=&quot;acs-commons/components/utilities/genericlist/datasource&quot;&#10;        path=&quot;/etc/designs/$path$&quot;/&gt;&#10;&lt;/$node$&gt;"
+        description="6.3 Graphic Icon Selector (You will need ACS commons Graphic Icon Selector)"
+        toReformat="false"
+        toShortenFQNames="true">
+        <variable name="node" expression="" defaultValue="&quot;icon&quot;" alwaysStopAt="true"/>
+        <variable name="project" expression="" defaultValue="&quot;myProject&quot;" alwaysStopAt="true"/>
+        <variable name="overrideLocation"
+            expression=""
+            defaultValue="&quot;path/to/component&quot;"
+            alwaysStopAt="true"/>
+        <variable name="fieldLabel" expression="" defaultValue="&quot;Icon&quot;" alwaysStopAt="true"/>
+        <variable name="name" expression="" defaultValue="&quot;icon&quot;" alwaysStopAt="true"/>
+        <variable name="path" expression="" defaultValue="&quot;path/to/your/icons&quot;" alwaysStopAt="true"/>
     </template>
 </templateSet>
