@@ -5,8 +5,9 @@
 ### Tab completion and rapid dialog creation for IntelliJ
 ![snapshot](/screencast/intellij-aem-dialogs.gif)
 
+
 Command | sling:resourceType
-___ | ___
+--- | ---
 textfield  | granite/ui/components/coral/foundation/form/textfield
 textarea | granite/ui/components/coral/foundation/form/textarea
 well | granite/ui/components/foundation/layouts/well
